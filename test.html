@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Demo Website</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mouse Demo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Explore Mouse Interactions</h2>
+            <p>This demo showcases interactive mouse features styled with <strong>test.css</strong>.</p>
+        </section>
+        <section class="demo-area" id="demoArea">
+            <h3>Try Moving Your Mouse Here!</h3>
+            <div class="mouse-box" id="mouseBox">
+                <span id="coords">Move your mouse inside this box.</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mouse Demo. All rights reserved.</p>
+    </footer>
+    <script>
+        const mouseBox = document.getElementById('mouseBox');
+        const coords = document.getElementById('coords');
+        mouseBox.addEventListener('mousemove', function(e) {
+            const rect = mouseBox.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            coords.textContent = `Mouse Position: X=${x}, Y=${y}`;
+        });
+        mouseBox.addEventListener('mouseleave', function() {
+            coords.textContent = 'Move your mouse inside this box.';
+        });
+    </script>
+</body>
+</html>
