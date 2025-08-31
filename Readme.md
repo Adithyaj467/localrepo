@@ -5,7 +5,7 @@ This repository contains a simple `test.html` file for demonstrating basic HTML 
 ## Usage
 
 1. Clone or download the repository.
-2. Open `test.html` in your web browser.
+2. Open `test.html` in your web.
 
 ## Features
 
